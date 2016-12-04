@@ -4,15 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { SnapComponent } from './snap/snap.component';
+import { TranslatorComponent } from './translator/translator.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SnapComponent,
+    TranslatorComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

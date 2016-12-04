@@ -1,0 +1,54 @@
+<div class="container">
+    <!-- header -->
+    <header>
+        <!-- header logo -->
+        <div class="header__logo">
+            <i class="material-icons">translate</i>
+        </div>
+        <!-- header title  -->
+        <div class="header__title">
+            {{selectedLanguage.name}}
+        </div>
+        <!-- header chose lang  -->
+        <div class="header__action">
+            <a href="#" (click)='toggleChoseLang()'>
+                <i class="material-icons">keyboard_arrow_{{choseLang ? 'up' : 'down'}}</i>
+            </a>
+        </div>
+    </header>
+
+    <!-- List lang -->
+    <div class="select-lang" [class.select-lang--open]="choseLang">
+        <div class='select-lang__item' *ngFor="let lang of languages">
+            <a href="#" (click)="setSelectedLanguage(lang)">
+                {{lang.name}}
+            </a>
+        </div>
+    </div>
+
+    <!-- results translation -->
+    <div class="results">
+        <div *ngFor="let translation of translations" class="result">
+                <div class="result__to">{{translation.result}}</div>
+                <div class="result__from">{{translation.search}}</div>
+        </div>
+    </div>
+
+    <!-- button take photo -->
+    <div class="footer" >
+        <a *ngIf="!loading" href="#" class="footer__button" (click)="translations.length > 0 ? newTranslation() : takePicture()">
+            <i class="material-icons">{{translations.length > 0 ? 'clear' : 'remove_red_eye'}}</i>
+        </a>
+        <a *ngIf="loading" href="#" class="footer__button footer__button--loading">
+            <i class="material-icons">loop</i>
+        </a>
+    </div>
+
+    <!-- background video - photo -->
+    <div class="bg" [class.bg--blur]="translations.length > 0">
+        <img src="" id="snap">
+        <video id="video"></video>
+        <canvas id="canvas"></canvas>
+    </div>
+
+</div>
