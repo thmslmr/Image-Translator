@@ -1,8 +1,8 @@
 export class Translator {
 
     apiKeys = {
-        cloudVision : 'AIzaSyC3k2LjEetQPZBoH9U7XZ4EdeJgpkzl1d0',
-        translate : 'AIzaSyC3k2LjEetQPZBoH9U7XZ4EdeJgpkzl1d0'
+        cloudVision : 'YOUR_API_KEY',
+        translate : 'YOUR_API_KEY'
     };
 
     apiUrls = {
