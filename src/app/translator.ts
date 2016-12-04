@@ -12,36 +12,36 @@ export class Translator {
 
     languages = [
         {
-            name : 'French',
-            code : 'fr'
-        },
-        {
-            name : 'Spanish',
-            code : 'es'
+            name : 'Arabic',
+            code : 'ar'
         },
         {
             name : 'Chinese',
             code : 'zh-CN'
         },
         {
-            name : 'Arabic',
-            code : 'ar'
-        },
-        {
-            name : 'Portuguese',
-            code : 'pt'
+            name : 'French',
+            code : 'fr'
         },
         {
             name : 'German',
             code : 'de'
         },
         {
+            name : 'Italian',
+            code : 'it'
+        },
+        {
+            name : 'Portuguese',
+            code : 'pt'
+        },
+        {
             name : 'Russian',
             code : 'ru'
         },
         {
-            name : 'Italian',
-            code : 'it'
+            name : 'Spanish',
+            code : 'es'
         }
     ];
 
